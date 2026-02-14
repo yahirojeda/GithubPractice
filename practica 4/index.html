@@ -39,10 +39,58 @@
         <br><br>
     </div>
     </fieldset>
-    <button>Enviar</button>
+
 
     <fieldset>
         <legend>Preferencias</legend>
+    <div>
+        <label for="food_preferences">Comida favorita:</label><br>
+        <select name="Comida favorita" id="food_preferences">
+        <option value="">Escoge una opción:</option>
+        <option value="A">Sushi</option>
+        <option value="B">Pizza</option>
+        <option value="C">Tacos</option>
+       </select>
+       <br><br>
+    </div>
+
+    <div>
+        <label for="cond_preferences">Aceptar terminos y condiciones</label><br>
+        <input type="checkbox" id="cond_preferences" name="terms" value="on" />
+        <br><br>
+    </div>
+
+    <div>
+        <p>Escoge una opción:</p>
+        <label for="a_radio_preferences">Sushi</label>
+        <input type="radio" id="a_radio_preferences" name="radioPrefs" value="A">
+
+        <label for="b_radio_preferences">Pizza</label>
+        <input type="radio" id="b_radio_preferences" name="radioPrefs" value="B">
+
+        <label for="c_radio_preferences">Tacos</label>
+        <input type="radio" id="c_radio_preferences" name="radioPrefs" value="C">
+    </div>
+    <br><br>
+
+    <div>      
+        <label for="colorFav">¿Cuál es tu color favorito?</label><br>
+        <input type="color" id="colorFav" name="colorFav">
+        <br><br>
+    </div>
+
+    <label for="cambiarFondo">Cambiar Fondo</label>
+    <button type="button" id="cambiarFondo">Para Javascript</button>
+    <button type="submit">Enviar formulario</button>
+
+    </fieldset>
+</form>
+
+<form action="https://www.youtube.com/results">
+    <fieldset>
+        <legend>Búsqueda</legend>
+        <input type="text" name="search_query">
+        <button>Buscar Youtube</button>
     </fieldset>
 </form>
 
