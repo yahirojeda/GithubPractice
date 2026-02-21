@@ -1,27 +1,27 @@
 /* Universal reset */
 /* (0.5) Completa: selector universal */
-REEMPLAZA {
+* {
   margin: 0;
   padding: 0;
 }
 
 /* Selector de etiqueta */
 /* (0.5) Completa: selector de body */
-REEMPLAZA {
+body {
   line-height: 1.6;
   background: #f9f9f9;
   color: #222;
 }
 
 /* (0.5) Completa: selector para header 2 */
-REEMPLAZA {
+h2 {
   color: teal;
   margin: 0.75rem;
 }
 
 /* Selector de clase */
 /* (0.25) Completa: para class card */
-REEMPLAZA {
+.card {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
@@ -30,19 +30,19 @@ REEMPLAZA {
 }
 
 /* (0.25) Completa: para class container */
-REEMPLAZA {
+.container {
   width: 50%;
 }
 
 /* (0.25) Completa: para class site-header */
-REEMPLAZA {
+.site-header {
   padding: 1rem;
   background: #111;
   color: #fff;
 }
 
 /* (0.25) Completa: para class site-footer */
-REEMPLAZA {
+.site-footer {
   padding: 1rem;
   background: #111;
   color: #fff;
@@ -50,28 +50,28 @@ REEMPLAZA {
 
 /* Selector de ID */
 /* (0.5) Completa: para id spanp */
-REEMPLAZA {
+#spanp {
   color: pink;
   background: black;
 }
 
 /* Selector de atributo*/
 /* (0.5) Completa: Si el href de los anchor comienzan con http */
-REEMPLAZA {
+a[href^="http"] {
   color: black;
   text-decoration: none;
 }
 
 /* Combinador descendiente */
 /* (0.5) Completa: Los párrafos dentro de la clase card dentro del id props*/
-REEMPLAZA {
+#props .card p {
   font-style: italic;
   color: slategray;
 }
 
 /* Combinador hijo directo */
 /* (0.5) Completa: los hijos directos de tipo ancla dentro de la clase nav */
-REEMPLAZA {
+.nav > a {
   font-weight: bold;
   color: #9fd;
   margin: 0.5rem;
@@ -79,46 +79,46 @@ REEMPLAZA {
 
 /* Combinador hermano adyacente */
 /* (0.5) Completa: Los hermanos adyacentes párrafos de los h2 */
-REEMPLAZA {
+h2 + p {
   background: greenyellow;
   padding: 0.5rem;
 }
 
 /* Combinador hermano general */
 /* (0.5) Completa: las clases card hermanos generales de clases card (Las primeras cartas de cada padre no cuentan) */
-REEMPLAZA {
+.card ~ .card {
   border-color: orange;
 }
 
 /* Pseudoclases de interacción */
 /* (0.5) Completa: Al poner el cursor sobre el id redbutton debe ser rojo*/
-REEMPLAZA {
+#redbutton:hover {
   background: red;
 }
 /* (0.5) Completa: Al presionar el id bluebutton debe ser azul */
-REEMPLAZA {
+#bluebutton:active {
   background: blue;
 }
 
 /* Pseudoclase :nth-of-type */
 /* (0.5) Completa: El tercer botón de la página que sea dorado */
-REEMPLAZA {
+button:nth-of-type(3) {
   background: gold;
 }
 
 /* Pseudoclase :checked */
 /* (0.5) Completa: que el input de tipo radio button sea verde (es el círculo del radio button) */
-REEMPLAZA {
+input[type="radio"]:checked {
   accent-color: limegreen;
 }
 /* (0.5) Completa: que el span del radio button también sea verde (revisen hermanos) */
-REEMPLAZA {
+input[type="radio"]:checked + span {
   color: limegreen;
 }
 
 /* Pseudo-elementos ::before y ::after */
 /* (1) Completa: para que aparezca el texto al inicio de los párrafos al pasar el cursor */
-REEMPLAZA {
+p:hover::before {
   content: "Inicio-->";
   background: black;
   color: white;
@@ -128,7 +128,7 @@ REEMPLAZA {
 }
 
 /* (1) Completa: para que aparezca el texto al final de los párrafos al pasar el cursor */
-REEMPLAZA {
+p:hover::after {
   content: "<--Final";
   background: black;
   color: white;
