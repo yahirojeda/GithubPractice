@@ -1,94 +1,132 @@
 body {
-  font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 nav {
-  font-size: 1.5rem;
-  /*1.- Agregar flex y hacer el espaciado igual entre los componentes con el primer objeto al inicio, último al final */
+    font-size: 1.5rem;
+    /*1.- Agregar flex y hacer el espaciado igual entre los componentes con el primer objeto al inicio, último al final */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h1 {
-  font-size: 6rem;
-  text-align: center;
+    font-size: 6rem;
+    text-align: center;
 }
 
 ul,
 li {
-  display: inline;
-  margin: 0;
-  padding: 0;
+    display: inline;
+    margin: 0;
+    padding: 0;
 }
 
 ul {
-  /*2.-Flex espaciado distribuido (centrado) con capacidad de crecimiento, ancho max de 90% */
+    /*2.-Flex espaciado distribuido (centrado) con capacidad de crecimiento, ancho max de 90% */
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    max-width: 90%;
 }
+
 
 /*3.-Ancho entre 150 y 699 pixeles */
- {
-  h1 {
-    color: blue;
-  }
+
+@media (min-width:150px) and (max-width:699px) {
+    h1 {
+        color: blue;
+    }
 }
+
 
 /*4.-Altura máxima de 800 pixeles */
- {
-  a {
-    color: black;
-    font-size: 1rem;
-  }
-  h1 {
-    color: cyan;
-  }
-  a:hover {
-    font-size: 3rem;
-    color: cyan;
-  }
+
+@media (max-height:800px) {
+    a {
+        color: black;
+        font-size: 1rem;
+    }
+    h1 {
+        color: cyan;
+    }
+    a:hover {
+        font-size: 3rem;
+        color: cyan;
+    }
 }
+
 
 /*5.-Ancho mínimo de 700 pixeles */
- {
-  h1 {
-    color: orange;
-  }
+
+@media (min-width:700px) {
+    h1 {
+        color: orange;
+    }
 }
+
 
 /*6.-Ancho mínimo de 1000 pixeles*/
- {
-  h1 {
-    color: yellow;
-  }
+
+@media (min-width:1000px) {
+    h1 {
+        color: yellow;
+    }
 }
+
 
 /*7.-Cuando tenga orientación horizontal*/
- {
-  body {
-    background-color: grey;
-  }
+
+@media (orientation: landscape) {
+    body {
+        background-color: grey;
+    }
 }
+
 
 /*8.-Ancho mínimo de 1500 pixeles y agregar al "body" un fondo de una imagen web que cubra la pantalla*/
- {
-  h1 {
-    color: green;
-  }
-  /*8.-Agregar un fondo que cubra y se repita de una imagen web */
+
+@media (min-width:1500px) {
+    h1 {
+        color: green;
+    }
+    /*8.-Agregar un fondo que cubra y se repita de una imagen web */
+    body {
+        background-image: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
+
 
 /*9-.Ancho máximo de 750 pixeles*/
- {
-  h1 {
-    font-size: 4rem;
-  }
-  /*9-.Cambiar los flex del nav y la ul del nav en columna alineada al centro */
+
+@media (max-width:750px) {
+    h1 {
+        font-size: 4rem;
+    }
+    /*9-.Cambiar los flex del nav y la ul del nav en columna alineada al centro */
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
+
 /*10.-Ancho máximo de 550 pixeles*/
- {
-  body {
-    font-size: 3em;
-    /*10.-Agregar la fuente roboto y usarla como primera opción */
-  }
-  h1 {
-    font-size: 2.5rem;
-  }
+
+@media (max-width:550px) {
+    body {
+        font-size: 3em;
+        /*10.-Agregar la fuente roboto y usarla como primera opción */
+        font-family: "Roboto", "Open Sans", sans-serif;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
 }
