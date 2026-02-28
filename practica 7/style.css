@@ -1,0 +1,88 @@
+p{
+    text-align: justify;
+}
+
+#enero {
+    width: 280px;
+    height: 200px;
+    padding: 1rem;
+    margin: 40px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2rem;
+    border-radius: 1rem;
+    overflow: scroll;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#febrero {
+    width: 30%;
+    height: 150px;
+    padding: 2rem;
+    margin: 25px;
+    border-style: dashed;
+    border-color: red;
+    border-width: 1rem;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+#marzo {
+    width: 40%;
+    height: 150px;
+    padding: 30pt;
+    margin: 30px;
+    border-style: dotted;
+    border-color: green;
+    border-width: 0.5rem;
+    border-top-left-radius: 40%;
+    overflow: scroll;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#abril {
+    width: 30%;
+    height: 100px;
+    padding: 10pt;
+    margin: 25px;
+    border-style: double;
+    border-color: orange;
+    border-width: 0.75rem;
+    overflow: scroll;
+    display: inline-block;
+    position: sticky;
+    top: 60%;
+}
+
+#mayo {
+    width: 75%;
+    height: 250px;
+    padding: 3rem;
+    margin: 50px;
+    border-style: groove;
+    border-color: purple;
+    border-width: 3rem;
+    border-radius: 30%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+#junio {
+    width: 25%;
+    height: 100px;
+    padding: 15pt;
+    margin: 35px;
+    border-style: ridge;
+    border-color: yellow;
+    border-left-color: violet;
+    border-right-color: aqua;
+    border-top-color: lightgreen;
+    border-width: 1.5rem;
+    overflow: hidden;
+    box-sizing: content-box;
+    position: relative;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+<form action="" method="get">
+    <fieldset>
+        <legend>Datos personales</legend>
+    <div>
+        <label for="fname">Primer nombre</label><br>
+        <input type="text" id="fname" name="nombre" placeholder="Ingresa tu nombre">
+        <br><br>
+    </div>
+
+    <div>
+        <label for="lname">Primer apellido</label><br>
+        <input type="text" id="lname" name="apellido" placeholder="Ingresa tu apellido">
+        <br><br>
+    </div>
+
+     <div>
+        <label for="email_datos">Correo</label><br>
+        <input type="email" id="email_datos" name="correo" placeholder="ejemplo@correo.com">
+        <br><br>    
+    </div>
+
+    <div>
+        <label for="pass_datos">Contraseña</label><br>
+        <input type="password" id="pass_datos" name="contraseña" placeholder="********">
+        <br><br>
+    </div>
+
+    <div>
+        <label for="age_datos">Edad</label><br>
+        <input type="number" id="age_datos" name="edad" placeholder="Ingresa tu edad" min="18">
+        <br><br>
+    </div>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Preferencias</legend>
+    <div>
+        <label for="food_preferences">Comida favorita:</label><br>
+        <select name="Comida favorita" id="food_preferences">
+        <option value="">Escoge una opción:</option>
+        <option value="A">Sushi</option>
+        <option value="B">Pizza</option>
+        <option value="C">Tacos</option>
+       </select>
+       <br><br>
+    </div>
+
+    <div>
+        <label for="cond_preferences">Aceptar terminos y condiciones</label><br>
+        <input type="checkbox" id="cond_preferences" name="terms" value="on" />
+        <br><br>
+    </div>
+
+    <div>
+        <p>Escoge una opción:</p>
+        <label for="a_radio_preferences">Sushi</label>
+        <input type="radio" id="a_radio_preferences" name="radioPrefs" value="A">
+
+        <label for="b_radio_preferences">Pizza</label>
+        <input type="radio" id="b_radio_preferences" name="radioPrefs" value="B">
+
+        <label for="c_radio_preferences">Tacos</label>
+        <input type="radio" id="c_radio_preferences" name="radioPrefs" value="C">
+    </div>
+    <br><br>
+
+    <div>      
+        <label for="colorFav">¿Cuál es tu color favorito?</label><br>
+        <input type="color" id="colorFav" name="colorFav">
+        <br><br>
+    </div>
+
+    <label for="cambiarFondo">Cambiar Fondo</label>
+    <button type="button" id="cambiarFondo">Para Javascript</button>
+    <button type="submit">Enviar formulario</button>
+
+    </fieldset>
+</form>
+
+<form action="https://www.youtube.com/results">
+    <fieldset>
+        <legend>Búsqueda</legend>
+        <input type="text" name="search_query">
+        <button>Buscar Youtube</button>
+    </fieldset>
+</form>
+
+</body>
+</html>
