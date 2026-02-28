@@ -1,0 +1,80 @@
+body {
+  text-align: center;
+  font-size: 3rem;
+}
+
+button {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  font-size: 4rem;
+}
+
+section {
+  border: 1rem;
+  border-style: solid;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding: 1rem;
+  border-color: slategray;
+}
+
+#button1 {
+}
+
+#button1:hover {
+}
+
+#button2 {
+}
+
+#button2:hover {
+}
+
+#button3 {
+}
+
+#button3:hover {
+}
+
+#button4 {
+}
+
+#button4:hover {
+}
+
+#button5 {
+}
+
+#button5:hover {
+}
+
+#button6 {
+}
+
+#button6:hover {
+}
+
+@keyframes button7 {
+}
+
+#button7:hover {
+}
+
+@keyframes button8 {
+}
+
+#button8:hover {
+}
+
+@keyframes button9 {
+}
+
+#button9:hover {
+}
+
+@keyframes button10 {
+}
+
+#button10:hover {
+}
