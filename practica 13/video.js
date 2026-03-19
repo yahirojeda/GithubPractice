@@ -1,11 +1,11 @@
 class LikeSystem {
-    constructor(){
+    constructor() {
         this.likes = 0;
     }
     like() {
         this.likes++;
     }
-    dislike(){
+    dislike() {
         this.likes--;
     }
     setLikes(value) {
@@ -16,32 +16,46 @@ class LikeSystem {
     }
 }
 
-class Comment{
-    constructor(user="", comm=""){
+class Comment {
+    constructor(user = "", comm = "") {
         this.user = user;
         this.comm = comm;
         this.LikeSystem = new LikeSystem();
     }
+
+    like() {
+        this.LikeSystem.like();
+    }
+
+    dislike() {
+        this.LikeSystem.dislike();
+    }
+
+    get likes() {
+        return this.LikeSystem.getLikes();
+    }
+
     printComment() {
         console.log(`${this.user}:${this.comm}`);
     }
 }
 
-class Video{
-    constructor(minutes=0, seconds=0, name=""){
-        this.minutes = Math.floor(minutes / 60);
-        this.seconds = seconds%60;
+class Video {
+    constructor(minutes = 0, seconds = 0, name = "") {
+        this.minutes = Math.floor(minutes);
+        this.seconds = seconds % 60;
         this.name = name;
         this.LikeSystem = new LikeSystem();
         this.comments = [];
     }
-    
+
     getCommentsNum() {
-    console.log(this.comments.lenght);
+        return this.comments.length;
     }
 
     printTime() {
-        console.log(`${this.minutes}:${this.seconds}`);
+        let sec = this.seconds < 10 ? "0" + this.seconds : this.seconds;
+        console.log(`${this.minutes}:${sec}`);
     }
 
     addComment(comment) {
@@ -49,36 +63,49 @@ class Video{
     }
 
     printComments() {
-        try {
-            for (let comment of this.comments) {
-                comment.printComment();
-            }
-        } catch (e) {
-            console.log(this.comments);
-        }
+        this.comments.forEach((comment, index) => {
+            console.log(`Comentario ${index + 1}:`);
+            comment.printComment();
+        });
     }
 
-    // Para LikeSystem
     like() {
         this.LikeSystem.like();
     }
 
-    
     dislike() {
         this.LikeSystem.dislike();
     }
 
-    
     get likes() {
-        console.log(this.LikeSystem.getLikes());
+        return this.LikeSystem.getLikes();
     }
 }
 
-const video1 = new Video(1, 30, "perritos comiendo");
 const com1 = new Comment("Mario", "El gato lo atacó");
+const com2 = new Comment("Ana", "Qué bonito video");
+const com3 = new Comment("Luis", "Me dio risa");
 
-com1.printComment();
+const video1 = new Video(1, 30, "perritos comiendo");
+const video2 = new Video(2, 45, "gatos jugando");
+
+video1.like();
+video1.like();
+video2.like();
+
+video1.addComment(com1);
+video1.addComment(com2);
+
+video2.addComment(com1);
+video2.addComment(com2);
+video2.addComment(com3);
+
 console.log(`El video1 tiene ${video1.likes} likes`);
 video1.printTime();
-video1.addComment(com1);
 video1.printComments();
+
+console.log("-------------");
+
+console.log(`El video2 tiene ${video2.likes} likes`);
+video2.printTime();
+video2.printComments();
