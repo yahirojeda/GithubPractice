@@ -64,7 +64,7 @@ const inventario = [
 //printData(inventario[0])='El producto 1K de tortilla de costo $20 tiene un id 1'
 //printData(inventario[3])='El producto 1L Leche sello rojo de costo $25 tiene un id 4'
 //printData(inventario[6])='El producto Lata de chiles jalapeños la costeña de costo $12 tiene un id 7'
-function printData(/*Agregar código*/) {
+function printData({ description: miproducto = "SIN DESC", price: costo = 0, id: identificador = 0 }) {
 	return `El producto ${miproducto} de costo $${costo} tiene un id ${identificador}`;
 }
 
@@ -80,8 +80,7 @@ El producto CSTCHJ tiene un stock de 12/12
 */
 //Revisar que no tenga datos undefined, el for a usar es aquel que sirve con objetos.
 function printTodo(inventory) {
-	for (/*Agregar código*/) {
-		/*Agregar código*/
+	for (const { name: nombre = "NONAME", stock: disp = 0, maxStock: max = 0 } of inventory) {
 		console.log(`El producto ${nombre} tiene un stock de ${disp}/${max}`);
 	}
 }
