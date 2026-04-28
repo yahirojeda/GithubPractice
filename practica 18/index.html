@@ -1,35 +1,35 @@
 <!doctype html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chef Async</title>
-    <script src="mainResuelto.js" defer></script>
-  </head>
+    <script src="main.js" defer></script>
+</head>
 
-  <body>
+<body>
     <h1>Cocina Async</h1>
     <p>
-      En esta cocina hay 5 cocineros encargados de un platillo cada uno,
-      llegarán los clientes y tu deber servirles el platillo que convenga,
-      cuidado que pueden perder la paciencia y marcharse sin comer.
+        En esta cocina hay 5 cocineros encargados de un platillo cada uno, llegarán los clientes y tu deber es servirles el platillo adecuado, considerando su paciencia.
     </p>
+
     <table border="1">
-      <thead>
-        <tr>
-          <th>Tipo</th>
-          <th>Logrados</th>
-          <th>Fallidos</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Pedidos</td>
-          <td id="totalSuccess">0</td>
-          <td id="totalFailed">0</td>
-        </tr>
-      </tbody>
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Logrados</th>
+                <th>Fallidos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pedidos</td>
+                <td id="totalSuccess">0</td>
+                <td id="totalFailed">0</td>
+            </tr>
+        </tbody>
     </table>
 
     <h2>Menú</h2>
@@ -54,5 +54,6 @@
 
     <h2>Pedidos fallidos</h2>
     <ul id="failedOrders"></ul>
-  </body>
+</body>
+
 </html>
